@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import plotly
 import plotly.express as px
 import pandas as pd
@@ -65,13 +65,14 @@ graphJSON = dump_json(make_fig(coordinates))
 
 
 @app.route('/git_update', methods=['POST'])
-def git_update():
-    repo = git.Repo('./portfolio_webapp')
-    origin = repo.remotes.origin
-    repo.create_head('main',
-                     origin.refs.main).set_tracking_branch(origin.refs.main).checkout()
-    origin.pull()
-    return '', 200
+def webhook():
+    if request.method == 'POST':
+        repo = git.Repo('./portfolio_webapp')
+        origin = repo.remotes.origin
+        origin.pull()
+        return 'OK', 200
+    else:
+        return 'Wrong event type', 400
 
 
 @app.route('/')
