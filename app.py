@@ -68,11 +68,8 @@ graphJSON = dump_json(make_fig(coordinates))
 def git_update():
     repo = git.Repo('./portfolio_webapp')
     origin = repo.remotes.origin
-    print('OK')
-    repo.create_head('master', origin.refs.master).set_tracking_branch(origin.refs.master).checkout()
-    print('Double OK')
+    repo.create_head('main', origin.refs.main).set_tracking_branch(origin.refs.main).checkout()
     origin.pull()
-    print('Triple OK')
     return '', 200
 
 
