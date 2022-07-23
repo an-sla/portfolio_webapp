@@ -1,8 +1,9 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import plotly
 import plotly.express as px
 import pandas as pd
 import json
+import git
 
 server = Flask(__name__)
 
@@ -70,4 +71,16 @@ def display():  # код приложения сюда
 
 if __name__ == '__main__':
     server.run(debug=True)
+
+
+@server.route('/webhook', methods=['POST'])
+def webhook():
+    if request.method == 'POST':
+        repo = git.Repo('./portfolio_webapp')
+        origin = repo.remotes.origin
+        repo.create_head('master', origin.refs.master).set_tracking_branch(origin.refs.master).checkout()
+        origin.pull()
+        return '', 200
+    else:
+        return '', 400
 
