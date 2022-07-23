@@ -69,7 +69,7 @@ def git_update():
     repo = git.Repo('./portfolio_webapp')
     origin = repo.remotes.origin
     print('OK')
-    repo.create_head('main', origin.refs.master).set_tracking_branch(origin.refs.master).checkout()
+    repo.create_head('master', origin.refs.master).set_tracking_branch(origin.refs.master).checkout()
     print('Double OK')
     origin.pull()
     print('Triple OK')
