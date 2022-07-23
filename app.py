@@ -64,15 +64,6 @@ def dump_json(fig):
 graphJSON = dump_json(make_fig(coordinates))
 
 
-@app.route('/git_update', methods=['GET', 'POST'])
-def git_update():
-    repo = git.Repo('./portfolio_webapp')
-    origin = repo.remotes.origin
-    repo.create_head('main', origin.refs.main).set_tracking_branch(origin.refs.main).checkout()
-    origin.pull()
-    return '', 200
-
-
 @app.route('/')
 def display():  # код приложения сюда
     return render_template('index.html', graphJSON=graphJSON)
