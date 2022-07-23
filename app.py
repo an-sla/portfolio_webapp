@@ -1,11 +1,11 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template
 import plotly
 import plotly.express as px
 import pandas as pd
 import json
 import git
 
-server = Flask(__name__)
+app = Flask(__name__)
 
 
 def download_df():
@@ -64,7 +64,7 @@ def dump_json(fig):
 graphJSON = dump_json(make_fig(coordinates))
 
 
-@server.route('/git_update', methods=['POST'])
+@app.route('/git_update', methods=['POST'])
 def git_update():
     repo = git.Repo('./portfolio_webapp')
     origin = repo.remotes.origin
@@ -74,10 +74,10 @@ def git_update():
     return '', 200
 
 
-@server.route('/')
+@app.route('/')
 def display():  # код приложения сюда
     return render_template('index.html', graphJSON=graphJSON)
 
 
 if __name__ == '__main__':
-    server.run(debug=True)
+    app.run(debug=True)
