@@ -73,14 +73,12 @@ if __name__ == '__main__':
     server.run(debug=True)
 
 
-@server.route('/webhook', methods=['POST'])
+@server.route('/update_server', methods=['POST'])
 def webhook():
     if request.method == 'POST':
-        repo = git.Repo('./portfolio_webapp')
+        repo = git.Repo('path/to/git_repo')
         origin = repo.remotes.origin
-        repo.create_head('master', origin.refs.master).set_tracking_branch(origin.refs.master).checkout()
         origin.pull()
-        return '', 200
+        return 'Updated PythonAnywhere successfully', 200
     else:
-        return '', 400
-
+        return 'Wrong event type', 400
