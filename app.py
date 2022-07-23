@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 
 def download_df():
-    df = pd.read_csv('files/geonames.csv', sep=';')
+    df = pd.read_csv('/home/ansla/portfolio_webapp/files/geonames.csv', sep=';')
     df['Name'] = df['Name'].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8')
     df[['lats', 'longs']] = df['Coordinates'].str.split(',', 1, expand=True)
     df['city_name'] = df['Name']
