@@ -1,0 +1,6 @@
+flask
+plotly
+plotly.express
+pandas
+json
+git
