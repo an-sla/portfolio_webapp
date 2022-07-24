@@ -69,7 +69,7 @@ def display():  # код приложения сюда
     return render_template('index.html', graphJSON=graphJSON)
 
 
-@app.route('/git_update', methods=['POST'])
+@app.route('/git_update', methods=['GET', 'POST'])
 def git_update():
     repo = git.Repo('./portfolio_webapp')
     origin = repo.remotes.origin
