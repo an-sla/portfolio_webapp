@@ -17,9 +17,11 @@ h4 {
     margin-top: 1em;
 }
 h5 {
-    color: rgb(80, 80, 80);
+    color: rgb(138, 138, 138);
     font-family: 'Ubuntu Mono', monospace;
     text-align: center;
+    font-size: 12px;
+    padding-top: 30px;
 }
 .center {
   display: block;
@@ -32,7 +34,7 @@ h5 {
 .column {
   float: left;
   width: 25%;
-  padding: 30px 30px 30px 30px;
+  padding: 50px 50px 50px 50px;
 }
 .row::after {
   content: "";
@@ -44,6 +46,6 @@ h5 {
     margin-bottom: 70px;
 }
 .side-buffers {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 120px;
+    margin-right: 120px;
 }
