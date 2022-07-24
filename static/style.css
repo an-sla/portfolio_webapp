@@ -35,7 +35,7 @@ h5 {
 .column {
   float: left;
   width: 25%;
-  padding: 0px 36px 36px 36px;
+  padding: 0px 30px 36px 30px;
 }
 .row::after {
   content: "";
