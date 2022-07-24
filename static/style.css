@@ -39,12 +39,11 @@ h5 {
   clear: both;
   display: table;
 }
-.top-buffer {
-    margin-bottom: 100px;
+.vertical-buffers {
+    margin-top: 30px;
+    margin-bottom: 70px;
 }
-.left-buffer {
+.side-buffers {
     margin-left: 100px;
-}
-.right-buffer {
     margin-right: 100px;
 }
