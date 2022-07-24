@@ -32,7 +32,7 @@ h5 {
 .column {
   float: left;
   width: 25%;
-  padding: 15px 15px 15px 15px;
+  padding: 30px 30px 30px 30px;
 }
 .row::after {
   content: "";
@@ -40,11 +40,11 @@ h5 {
   display: table;
 }
 .top-buffer {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 .left-buffer {
-    margin-left: 50px;
+    margin-left: 100px;
 }
 .right-buffer {
-    margin-right: 50px;
+    margin-right: 100px;
 }
