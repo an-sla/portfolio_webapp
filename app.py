@@ -22,6 +22,7 @@ countries = ['Switzerland', 'Italy', 'United Kingdom', 'Czech Republic', 'Russia
              'Italy']
 
 
+# method for adding city and country
 def add_city_country(city, country, loc, country_list):
     loc.append(city)
     country_list.append(country)
@@ -65,16 +66,16 @@ graphJSON = dump_json(make_fig(coordinates))
 
 
 @app.route('/')
-def display():  # код приложения сюда
+def display():  # app code here
     return render_template('index.html', graphJSON=graphJSON)
 
 
+# for continuous deployment through GitHub webhooks:
 @app.route('/git_update', methods=['POST'])
 def git_update():
     repo = git.Repo('./portfolio_webapp')
     origin = repo.remotes.origin
-    repo.create_head('main',
-                     origin.refs.main).set_tracking_branch(origin.refs.main).checkout()
+    repo.create_head('main', origin.refs.main).set_tracking_branch(origin.refs.main).checkout()
     origin.pull()
     return '', 200
 
