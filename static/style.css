@@ -38,6 +38,13 @@ h5 {
   content: "";
   clear: both;
   display: table;
-  padding-right: 60px;
-  padding-left: 60px;
+}
+.top-buffer {
+    margin-bottom: 50px;
+}
+.left-buffer {
+    margin-left: 50px;
+}
+.right-buffer {
+    margin-right: 50px;
 }
