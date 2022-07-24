@@ -71,7 +71,7 @@ def display():  # код приложения сюда
 
 @app.route('/git_update', methods=['POST'])
 def git_update():
-    repo = git.Repo('./orbe')
+    repo = git.Repo('./portfolio_webapp')
     origin = repo.remotes.origin
     repo.create_head('main',
                      origin.refs.main).set_tracking_branch(origin.refs.main).checkout()
