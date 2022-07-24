@@ -39,3 +39,9 @@ h5 {
   clear: both;
   display: table;
 }
+.padright {
+    padding-right: 30px;
+}
+.padleft {
+    padding-left: 30px;
+}
