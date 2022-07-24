@@ -6,7 +6,7 @@ h3 {
     color: rgb(138, 162, 150);
     font-family: 'Ubuntu Mono', monospace;
     text-align: center;
-    margin-top: 2.5cm;
+    margin-top: 2.2cm;
     font-size: 40px;
 }
 h4 {
@@ -14,7 +14,7 @@ h4 {
     font-family: 'Ubuntu Mono', monospace;
     text-align: center;
     font-size: 19px;
-    padding-top: 10px;
+    padding-top: 0px;
     padding-bottom: 40px;
 }
 h5 {
@@ -54,6 +54,6 @@ h5 {
     margin-bottom: 70px;
 }
 .side-buffers {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 90px;
+    margin-right: 90px;
 }
