@@ -100,5 +100,6 @@ def ldn_centre():
 def muottas_muragl():
     return render_template('Celerina(muottas_muragl).html')
 
+
 if __name__ == '__main__':
     app.run(debug=True)
