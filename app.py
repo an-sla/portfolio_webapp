@@ -17,15 +17,9 @@ def download_df():
     return df
 
 
-locations = ['St. Moritz', 'Menaggio', 'London', 'Prague', 'Moscow', 'Lysa nad Labem', 'Corvara in Badia']
-countries = ['Switzerland', 'Italy', 'United Kingdom', 'Czech Republic', 'Russian Federation', 'Czech Republic',
-             'Italy']
-
-
-# method for adding city and country
-def add_city_country(city, country, loc, country_list):
-    loc.append(city)
-    country_list.append(country)
+locations = ['St. Moritz', 'Pontresina', 'Celerina', 'Scuol', 'Menaggio', 'London', 'Prague', 'Moscow', 'Lysa nad Labem', 'Corvara in Badia', 'Brunico']
+countries = ['Switzerland', 'Switzerland', 'Switzerland', 'Switzerland', 'Italy', 'United Kingdom', 'Czech Republic', 'Russian Federation', 'Czech Republic',
+             'Italy', 'Italy']
 
 
 def prep_df(loc, country_list, df):
