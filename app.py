@@ -44,7 +44,7 @@ def make_fig(coord):
         'pk.eyJ1IjoiYW5zbGEiLCJhIjoiY2w1d3JwMDEyMGU0NDNkcGltMjNicDI1biJ9.nEww_FHimU8Klrqc-qhNTg')  # Токен из mapbox
     fig = px.scatter_mapbox(coord, lon=coord['longs'], lat=coord['lats'], custom_data=['city_name'],
                             mapbox_style='dark', size='dummy_column_for_size', color_discrete_sequence=['#527066'],
-                            zoom=3, center={'lat': prague_lat, 'lon': prague_lon})
+                            zoom=3.25, center={'lat': prague_lat, 'lon': prague_lon})
     fig.update_traces(hovertemplate='%{customdata[0]}')
     fig.update_layout(paper_bgcolor='black')
     fig.update_layout(margin={'r': 0, 't': 0, 'l': 0, 'b': 0})
