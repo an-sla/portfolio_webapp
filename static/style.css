@@ -41,6 +41,9 @@ h5 {
   clear: both;
   display: table;
 }
+.center{
+   text-align: center;
+}
 .caption {
     font-size: 16px;
     color: rgb(138, 162, 150);
