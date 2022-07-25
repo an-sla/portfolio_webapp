@@ -29,7 +29,7 @@ All images are shot by me, edited using my own Adobe Lightroom presets (Lightroo
 
 ### Geographical Data and Plotly 
 
-###Hosting and Deployment
+### Hosting and Deployment
 
 To create webapp hosting and ensure free continuous deployment at PythonAnywhere I recommend [this video](https://www.youtube.com/watch?v=AZMQVI6Ss64). It explains how to use GitHub webhooks, git hooks, and the PythonAnywhere interface to host and seamlessly update your site.
 <br>
