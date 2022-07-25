@@ -76,14 +76,10 @@ def git_update():
     return '', 200
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
-
-
 @app.route('/Corvara')
 def corvara():
     return render_template('Corvara_in_Badia.html')
 
-
 if __name__ == '__main__':
     app.run(debug=True)
+
