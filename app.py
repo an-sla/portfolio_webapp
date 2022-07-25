@@ -80,6 +80,17 @@ def git_update():
 def corvara():
     return render_template('Corvara_in_Badia.html')
 
+
+@app.route('/lysa_nad_labem')
+def lysa():
+    return render_template('Lysa_nad_Labem.html')
+
+
+@app.route('/london_brixton')
+def brixton():
+    return render_template('London(brixton).html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 
