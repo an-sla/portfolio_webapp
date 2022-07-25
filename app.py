@@ -76,7 +76,7 @@ def git_update():
     return '', 200
 
 
-@app.route('/Corvara')
+@app.route('/corvara')
 def corvara():
     return render_template('Corvara_in_Badia.html')
 

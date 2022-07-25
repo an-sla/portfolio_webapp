@@ -56,3 +56,10 @@ h5 {
     margin-left: 6.7%;
     margin-right: 6.7%;
 }
+subheadings {
+    color: rgb(138, 162, 150);
+    font-family: 'Ubuntu Mono', monospace;
+    text-align: center;
+    margin-top: 2.2cm;
+    font-size: 19px;
+}
