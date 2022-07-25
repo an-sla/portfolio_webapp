@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital@0;1&display=swap');
+        </style>
+        <link rel="stylesheet" href="/static/style.css">
+        <script src="/static/index.js"></script>
+    </head>
+    <body>
+        <h3>Corvara in Badia<br>12/2021</h3>
+        <h5>Series:</h5>
+        <div class="row side-buffers vertical-buffers">
+            <div class="column">
+                <img src={{url_for('static', filename="Switzerland-album-header.jpg")}} alt="Switzerland1" style="width:100%">
+                <div class="caption center-block">St. Moritz<br>07/22</div>
+            </div>
+            <div class="column">
+                <img src={{ url_for('static', filename="LysaNadLabem-album-header.jpg")}} alt="LysaNadLabem" style="width:100%">
+                <div class="caption center-block">Lysa nad Labem<br>07/22</div>
+            </div>
+            <div class="column">
+                <img src={{ url_for('static', filename="Corvara-album-header.jpg")}} alt="CorvaraInBadia" style="width:100%">
+                <div class="caption center-block">Corvara in Badia<br>12/21</div>
+            </div>
+            <div class="column">
+                <img src={{ url_for('static', filename="London-album-header.jpg")}} alt="London1" style="width:100%">
+                <div class="caption center-block">London<br>09/21</div>
+            </div>
+        </div>
+    </body>
+    <h5>©️ A.S.</h5>
+</html>

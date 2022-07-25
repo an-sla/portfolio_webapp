@@ -17,8 +17,10 @@ def download_df():
     return df
 
 
-locations = ['St. Moritz', 'Pontresina', 'Celerina', 'Scuol', 'Menaggio', 'London', 'Prague', 'Moscow', 'Lysa nad Labem', 'Corvara in Badia', 'Brunico']
-countries = ['Switzerland', 'Switzerland', 'Switzerland', 'Switzerland', 'Italy', 'United Kingdom', 'Czech Republic', 'Russian Federation', 'Czech Republic',
+locations = ['St. Moritz', 'Pontresina', 'Celerina', 'Scuol', 'Menaggio', 'London', 'Prague', 'Moscow',
+             'Lysa nad Labem', 'Corvara in Badia', 'Brunico']
+countries = ['Switzerland', 'Switzerland', 'Switzerland', 'Switzerland', 'Italy', 'United Kingdom', 'Czech Republic',
+             'Russian Federation', 'Czech Republic',
              'Italy', 'Italy']
 
 
@@ -72,6 +74,15 @@ def git_update():
     repo.create_head('main', origin.refs.main).set_tracking_branch(origin.refs.main).checkout()
     origin.pull()
     return '', 200
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+@app.route('/Corvara')
+def corvara():
+    return render_template('Corvara_in_Badia.html')
 
 
 if __name__ == '__main__':
