@@ -50,7 +50,7 @@ The Ubuntu Mono font available through Google fonts is licenced with the copylef
 
 The countries-and-coordinates dataset stored in `geonames.csv` is compiled by GeoNames, accessible via Opendatasoft on [this site](https://public.opendatasoft.com/explore/dataset/geonames-all-cities-with-a-population-1000/table/?disjunctive.cou_name_en&sort=name&location=12,51.477,-0.01854&basemap=jawg.light) with the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
 
-The webapp's design and all images on the site are my property (©️).
+The webapp's exact design and all images on the site are my property (©️), to be used with permission only.
 <br></br>
 ## Contributors
 
