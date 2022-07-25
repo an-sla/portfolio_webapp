@@ -41,10 +41,6 @@ h5 {
   clear: both;
   display: table;
 }
-.col-centered{
-    float: none;
-    margin: 0 auto;
-}
 .caption {
     font-size: 16px;
     color: rgb(138, 162, 150);
