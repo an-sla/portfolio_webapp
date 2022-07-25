@@ -90,11 +90,16 @@ def lysa():
 def brixton():
     return render_template('London(brixton).html')
 
+
 @app.route('/london_centre')
 def ldn_centre():
     return render_template('London(centre).html')
 
 
+@app.route('/celerina_muottas_muragl')
+def ldn_centre():
+    return render_template('Celerina(muottas_muragl).html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
-
