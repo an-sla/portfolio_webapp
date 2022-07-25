@@ -97,7 +97,7 @@ def ldn_centre():
 
 
 @app.route('/celerina_muottas_muragl')
-def ldn_centre():
+def muottas_muragl():
     return render_template('Celerina(muottas_muragl).html')
 
 
