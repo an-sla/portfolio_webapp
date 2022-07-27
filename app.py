@@ -43,7 +43,7 @@ prague_lon = coordinates[coordinates['city_name'] == 'Prague']['longs'].values[0
 
 def make_fig(coord):
     px.set_mapbox_access_token(
-        'pk.eyJ1IjoiYW5zbGEiLCJhIjoiY2w1d3JwMDEyMGU0NDNkcGltMjNicDI1biJ9.nEww_FHimU8Klrqc-qhNTg')  # Токен из mapbox
+        'pk.eyJ1IjoiYW5zbGEiLCJhIjoiY2w1d3JwMDEyMGU0NDNkcGltMjNicDI1biJ9.nEww_FHimU8Klrqc-qhNTg')  # Mapbox token
     fig = px.scatter_mapbox(coord, lon=coord['longs'], lat=coord['lats'], custom_data=['city_name'],
                             mapbox_style='dark', size='dummy_column_for_size', color_discrete_sequence=['#527066'],
                             zoom=3.5, center={'lat': prague_lat, 'lon': prague_lon})

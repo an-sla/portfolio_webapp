@@ -4,7 +4,7 @@ This is a web-application built with Python, hosted for free on [PythonAnywhere]
 
 The website is available to browse [here](http://ansla.pythonanywhere.com).
 <br>
-**💥Tip**: turn off 'Prevent cross-site tracking' or 'Cookies' in your browser to view images if they are not loading.
+**💥Tip**: turn off 'Prevent cross-site tracking' or 'Prevent Cookies' in your browser to view images if they are not loading.
 <br></br>
 ## Features
 
@@ -24,11 +24,15 @@ All images are shot by me, edited using my own Adobe Lightroom presets (Lightroo
 
 ### Working with Flask
 
+[This brief tutorial](https://pythonhow.com/python-tutorial/flask) is helpful in understanding the basics of backend with Flask, the lessons also feature handy instructions for adding more pages to the webapp and creating a navigation menu. The [Quickstart Documentation](https://flask.palletsprojects.com/en/2.1.x/quickstart/) for Flask covers these fundamentals as well.
 
+These two tutorials, [(1)](https://linuxhint.com/build-a-website-with-python/) and [(2)](https://scoutapm.com/blog/python-flask-tutorial-getting-started-with-flask), go over the file structure, including the `static` directory for CSS and JS and the HTML `templates` files. The second link also explains the benefits of using the Flask micro-framework over Django, which is a good subject to explore more broadly.
 
 ### HTML and CSS
 
+[W3Schools](https://www.w3schools.com/html/) and Stack Overflow are very useful in providing advice and snippets of CSS/HTML code for particular styling and visualisation needs, like adding links to images, styling headings, centering text, etc.
 
+For image display in neat rows, I recommend exploring [Bootstrap 'grid' properties](https://getbootstrap.com/docs/4.0/layout/grid/), among other Bootstrap functionality.
 
 ### Image Storage and Access
 
@@ -36,13 +40,33 @@ Google Drive is a good storage option for free, although the final webapp load-t
 
 ### Geographical Data and Plotly
 
+I add my locations to two lists (country + town) to then access their coordinates from [this dataset](https://public.opendatasoft.com/explore/dataset/geonames-all-cities-with-a-population-1000/table/?disjunctive.cou_name_en&sort=name&location=12,51.477,-0.01854&basemap=jawg.light) available as a `csv`. I then use Pandas to match the locations with their lattitude and longitude values.
+<br>
+**💥Tip**: adding a country list is useful, because there may be multiple cities with the same name in the GeoNames dataset, and you can then end up with multiple 'Londons' in 3+ different countries.
+
+I then work with the Plotly Python library to create a `scatter_mapbox` with custom settings to fit the display style of my site.
+<br>
+**💥Tip**: you will need to sign up to Mapbox and [generate your own access token](https://docs.mapbox.com/help/how-mapbox-works/access-tokens/#how-access-tokens-work) to render Plotly charts.
+
+Following [this helpful TDS tutorial](https://towardsdatascience.com/web-visualization-with-plotly-and-flask-3660abf9c946), I finally 'dump' my Python Plotly chart into a JSON and use the following code to display the plot using Plotly.js:
+```angular2html
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type='text/javascript'>
+    const graphs = {{graphJSON | safe}};
+    graphs.config = {displayModeBar: false};
+    Plotly.newPlot('chart', graphs);
+</script>
+```
+
+**💥Tip**: the script needs to be outside the `<body>` tag, while the chart class item itself needs to be inside it: `<body><div id='chart' class='chart'></div></body>`.
+
 
 
 ### Hosting and Deployment
 
 To create webapp hosting and ensure free continuous deployment at PythonAnywhere I recommend following the steps in [this video](https://www.youtube.com/watch?v=AZMQVI6Ss64). It explains how to use GitHub webhooks, git hooks, and the PythonAnywhere interface to host and seamlessly update your site.
 <br>
-**💥Tip**: In troubleshooting GitHub webhooks, check if your repository is public. Otherwise, the continuous deployment procedure described in the video may not work (`Error 500`). 
+**💥Tip**: in troubleshooting GitHub webhooks, check if your repository is public. Otherwise, the continuous deployment procedure described in the video may not work (`Error 500`). 
 <br></br>
 ## License
 
