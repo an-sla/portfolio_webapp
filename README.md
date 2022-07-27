@@ -19,7 +19,8 @@ All images are shot by me, edited using my own Adobe Lightroom presets (Lightroo
 **💥Tip**: loading large-resolution images from Google Drive might take a few seconds.
 
 >### ✔️All the features can be recreated for free.
-<br></br>
+<br>
+
 ## Getting Started — Creating a Similar Webapp
 
 ### Working with Flask
@@ -59,8 +60,6 @@ Following [this helpful TDS tutorial](https://towardsdatascience.com/web-visuali
 ```
 
 **💥Tip**: the script needs to be outside the `<body>` tag, while the chart class item itself needs to be inside it: `<body><div id='chart' class='chart'></div></body>`.
-
-
 
 ### Hosting and Deployment
 
