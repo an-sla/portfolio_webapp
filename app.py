@@ -17,10 +17,9 @@ def download_df():
     return df
 
 
-locations = ['St. Moritz', 'Pontresina', 'Celerina', 'Scuol', 'Menaggio', 'London', 'Prague', 'Moscow',
+locations = ['St. Moritz', 'Pontresina', 'Celerina', 'Scuol', 'Menaggio', 'London', 'Prague',
              'Lysa nad Labem', 'Corvara in Badia', 'Brunico']
-countries = ['Switzerland', 'Switzerland', 'Switzerland', 'Switzerland', 'Italy', 'United Kingdom', 'Czech Republic',
-             'Russian Federation', 'Czech Republic',
+countries = ['Switzerland', 'Switzerland', 'Switzerland', 'Switzerland', 'Italy', 'United Kingdom', 'Czech Republic', 'Czech Republic',
              'Italy', 'Italy']
 
 
